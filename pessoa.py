@@ -108,3 +108,21 @@ def beneficiarios_por_valor(lista_cadastro: List[Pessoa]):
                 maiores.append(j)
 
     return maiores
+
+
+def beneficiarios_por_tempo(lista_cadastro: List[Pessoa]):
+    maiores = []
+    lista_beneficiarios = []
+    for i in lista_cadastro:
+        if i.verificar_maior_idade():
+            lista_beneficiarios.append(i)
+    lista_tempos = []
+    for i in lista_beneficiarios:
+        lista_tempos.append(i.mesesbenef)
+    lista_tempos.sort(reverse=True)
+    for i in lista_tempos:
+        for j in lista_beneficiarios:
+            if i == j.mesesbenef:
+                maiores.append(j)
+
+    return maiores
