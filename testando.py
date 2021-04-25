@@ -1,4 +1,4 @@
-from datetime import date
+import datetime
 
 def calculate_age(born):
     today = date.today()
@@ -15,4 +15,4 @@ def calculo():
     print(f'A porcentagem de {porcentagem}% é um valor de {valor_por}')
     print(f'O valor final é {valor_final}')
 
-calculo()
+print(datetime.datetime.now())
