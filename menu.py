@@ -68,7 +68,7 @@ while not fim:
     print('='*100)
     resp = False
     while not resp:
-        op = input('Deseja cadastrar uma nova pessoa? s/n')
+        op = input('Deseja cadastrar uma nova pessoa? s/n').lower()
         if op == 's':
             resp = True
             fim = False
